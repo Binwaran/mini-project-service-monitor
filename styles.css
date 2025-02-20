@@ -1,19 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap');
+
 :root {
-    --primary-color: #FFFFFF; /* สีหลัก */
-    --secondary-color: #; /* สีรอง */
-    --background-color: #f3f4f6; /* สีพื้นหลัง */
-    --text-color: #1f2937; /* สีตัวอักษร */
-    --border-radius: 8px; /* ขอบมน */
-    --padding: 16px; /* ระยะห่าง */
+    /* ฟอนต์ */
+    --font-dm-sans: 'DM Sans', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+
+    /* สี */
+    --color-primary: #FF7342; /* สีส้ม */
+    --color-secondary: #FFD167; /* สีเหลือง */
+    --color-third: #FFFFFF; /* สีพื้นหลัง 1 */
+    --color-forth: #F9F9F9; /* สีพื้นหลัง 2 */
+    --color-text: #3B3B3B; /* สีดำเข้ม */
+
 }
 
-/*-- ตัวอย่างวิธีใช้
-ใช้ใน css 
-background-color: var(--primary-color);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-tailwind 
-bg-primar สามารถใส่ได้เลย
---*/
-* {
-  font-family: 'Montserrat', sans-serif;
+@layer base {
+    /* ใช้ฟอนต์ */
+    .font-dm-sans {
+        font-family: var(--font-dm-sans);
+    }
+    .font-montserrat {
+        font-family: var(--font-montserrat);
+    }
+
+    /* ใช้สี */
+    .text-primary {
+        color: var(--color-primary) !important;
+    }
+    .text-secondary {
+        color: var(--color-secondary) !important;
+    }
+    .text-third {
+        color: var(--color-third) !important;
+    }
+    .text-forth {
+        color: var(--color-forth) !important;
+    }
+    
+    .bg-primary {
+        background-color: var(--color-primary) !important;
+    }
+    .bg-secondary {
+        background-color: var(--color-secondary) !important;
+    }
+    .bg-third {
+        background-color: var(--color-third) !important;
+    }
+    .bg-forth {
+        background-color: var(--color-forth) !important;
+    }
+
+    .hover\:text-primary:hover {
+        color: var(--color-primary) !important;
+    }
+    .hover\:text-secondary:hover {
+        color: var(--color-primary) !important;
 }
+
+

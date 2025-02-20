@@ -1,20 +1,24 @@
-/** @type {import('tailwindcss').Config} */
+/** /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./*.html"], // ระบุว่า Tailwind จะทำงานกับไฟล์ HTML ในโฟลเดอร์นี้
-    theme: {
-      extend: {
-        colors: {
-          primary: "#4f46e5", // สีหลัก
-          secondary: "#64748b", // สีรอง
-        },
-        borderRadius: {
-          base: "8px",
-        },
-        padding: {
-          base: "16px",
-        },
+  content: ["./*.html"], // ระบุว่า Tailwind จะทำงานกับไฟล์ HTML ในโฟลเดอร์นี้
+  theme: {
+    extend: {
+      screens: {
+        'xs': '375px', // เพิ่ม Breakpoint ใหม่ที่ 375px
+      },
+      colors: {
+        primary: "#4f46e5", // สีหลัก
+        secondary: "#64748b", // สีรอง
+      },
+      borderRadius: {
+        base: "8px",
+      },
+      padding: {
+        base: "16px",
       },
     },
-    plugins: [],
-  };
+  },
+  plugins: [],
+};
+
   
