@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root {
     --primary-color: #FFFFFF; /* สีหลัก */
     --secondary-color: #; /* สีรอง */
@@ -7,6 +12,7 @@
     --padding: 16px; /* ระยะห่าง */
 }
 
+
 /*-- ตัวอย่างวิธีใช้
 ใช้ใน css 
 background-color: var(--primary-color);
@@ -14,3 +20,6 @@ background-color: var(--primary-color);
 tailwind 
 bg-primar สามารถใส่ได้เลย
 --*/
+* {
+  font-family: 'Montserrat', sans-serif;
+}

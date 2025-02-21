@@ -1,28 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service Monitor</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <header>
-      <!-- Dev 1-->
+</head>
+<body class="  m-0 p-0 box-border bg-gradient-to-b from-orange-100 to-white w-full ">
+    <!-- Dev 1-->
+    <header class="container mx-auto p-4 h-[1048px] md:h-[1048px] sm:h-[790px] relative pt-40 sm:pt-32">
+        <!-- Nav Bar -->
+        <nav class=" flex justify-between items-center py-4 fixed top-0 left-0 mt-5 w-full">
+            <!-- Logo -->
+            <div class="flex-shrink-0 mr-20 w-[182.91] h-[54.65px] ml-10">
+                <img src="images/img-logo.svg" alt="Logo" class="h-10">
+            </div>
+            
+            <!-- Menu -->
+            <div class="hidden md:flex space-x-20 sm:space-x-3 md:space-x-5 lg:space-x-10 xl:space-x-15 2xl:space-x-20 text-black flex-grow ml-[50px]">
+                <a href="#" class="hover:text-orange-500 font-dm-sans font-medium leading-[23.44px] active:text-orange-500 underline">Home</a>
+                <a href="#" class="hover:text-orange-500 font-dm-sans font-medium leading-[23.44px]">Feature</a>
+                <a href="#" class="hover:text-orange-500 font-dm-sans font-medium leading-[23.44px]">Pricing</a>
+                <a href="#" class="hover:text-orange-500 font-dm-sans font-medium leading-[23.44px]">Testimonial</a>
+            </div>
+            
+            <!-- Buttons -->
+            <div class="hidden md:flex flex-wrap justify-end space-x-4 md:space-x-2 sm:space-x-1 mr-10">
+                <button class="bg-yellow-400 text-black w-[139px] h-[64px] lg:w-[130px] lg:h-[60px] md:w-[120px] md:h-[56px] sm:w-[110px] sm:h-[52px] xs:w-[100px] xs:h-[48px] flex-shrink rounded-md hover:bg-orange-500 hover:text-white">Register</button>
+                <button class="bg-orange-500 text-white w-[139px] h-[64px] lg:w-[130px] lg:h-[60px] md:w-[120px] md:h-[56px] sm:w-[110px] sm:h-[52px] xs:w-[100px] xs:h-[48px] flex-shrink rounded-md hover:bg-yellow-400 hover:text-black">Sign In</button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-2xl mr-10">
+                    <box-icon name='grid-small' size='lg'></box-icon>
+                </button>
+                <div id="mobile-menu" class="hidden absolute top-16 right-4 bg-white shadow-lg rounded-md w-48 flex flex-col">
+                    <a href="#" class="p-4 hover:bg-yellow-100">Home</a>
+                    <a href="#" class="p-4 hover:bg-yellow-100">Feature</a>
+                    <a href="#" class="p-4 hover:bg-yellow-100">Pricing</a>
+                    <a href="#" class="p-4 hover:bg-yellow-100">Testimonial</a>
+                    <div class="p-4 flex flex-col space-y-2">
+                        <button class="bg-yellow-400 text-black px-4 py-2 rounded-md hover:bg-orange-500 hover:text-white">Register</button>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-yellow-400 hover:text-black">Sign In</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class=" h-[666.83px] flex flex-col-reverse md:flex-row items-center justify-around mt-[20px] text-center md:text-left">
+            <!-- Left Side -->
+            <div class="flex flex-col space-y-6 md:w-2/5 text-start md:text-left md:pl-10">
+                <h1 class="text-3xl md:text-6xl sm:text-7xl font-bold text-gray-800 max-w-[605px] md:h-auto sm:h-auto flex-shrink">Best Platform<br>for Monitor<br>Work Flow</h1>
+                <button class="bg-orange-500 text-white px-[10px] py-3 rounded-md hover:bg-yellow-400 hover:text-black w-auto min-w-0 inline-block">Get 15 Day Trial</button>
+                <div>
+                    <img src="images/img-partner-logos.svg" alt="Partner Logos" class="h-10 mt-10">
+                </div>
+            </div>
+            
+            <!-- Right Side -->
+            <div class="mt-0 sm:mt-10 md:mt-0 md:w-3/5 flex justify-center ml-auto pt-0 sm:pt-20 flex-shrink">
+                <img src="images/img-chart&graph.svg" alt="Dashboard Graphic" class="w-[351px] h-[250px] sm:w-[936.92px] sm:h-[666.83px]">
+            </div>
+        </div>
     </header>
 
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+    
     <!-- Featured Dev 2-->
 
+    <div id="Featured" class="flex flex-col mx-[10px] mt-[70px] mb-[57px] sm:mx-[250px] sm:mt-[96px] sm:mb-[86px]">
+        <!-- Title Section -->
+        <div class="flex flex-row justify-center mb-[30px] sm:mb-[60px]">
+            <div>
+                <h2
+                    class="relative w-[194px] h-[68px] sm:w-[380px] sm:h-[116px] text-[24px] sm:text-[48px] font-Montserrat text-[#3B3B3B] font-black leading-[34px] sm:leading-[58px] text-center ">
+                    Featured We Provide for You
+                    <div
+                        class="absolute top-[4px] left-[9px] w-[93px] h-[30px] sm:top-[8px] sm:left-[35px] bg-[#FF734233]/20 sm:w-[165px] sm:h-[48px] border-[#FF7342] border-[0.5px] ">
+                    </div>
+                </h2>
+            </div>
+        </div>
+
+        <!-- Feature Cards -->
+        <div
+            class="flex-col justify-items-center sm:justify-items-center sm:flex-row sm:grid sm:grid-cols-6 sm:grid-rows-2 gap-x-[30px] gap-y-[30px]">
+
+            <!-- Dashboard 1 -->
+            <div
+                class="w-[355px] h-[206px] sm:w-[453px] sm:h-[178px] flex col-span-2 flex sm:items-center items-start bg-white shadow-[5px_30px_56px_0px_#3737371C] rounded-[20px] sm:px-[30px] sm:py-[40px] px-[30px] py-[40px] mb-[16px]">
+
+                <div class="relative w-[80px] h-[80px] bg-[#6A99FF] rounded-full">
+                    <img class="absolute top-[20px] left-[20px] w-[40px]" src="/images/dashboard.png" alt="dashboard">
+                </div>
+                <div class="w-[289px] h-[98px] ml-6 basis-[64%]">
+                    <h3
+                        class="font-Montserrat font-bold text-[#3B3B3B] text-[24px] leading-[32px] sm:mb-[10px] mb-[10px]">
+                        Dashboard</h3>
+                    <p class="font-DM+Sans font-normal text-[#5A7184] text-[16px] leading-[28px] ">
+                        Assertively
+                        parallel
+                        task synergistic deliverables after high-quality.</p>
+                </div>
+            </div>
+
+            <!-- Statistics 2 -->
+            <div
+                class="w-[355px] h-[206px] sm:w-[453px] sm:h-[178px] col-span-2 col-start-3 flex sm:items-center items-start bg-white shadow-[5px_30px_56px_0px_#3737371C] rounded-[20px] px-[30px] py-[40px] mb-[16px]">
+                <div class="relative w-[80px] h-[80px] bg-[#FF7342] text-white rounded-full">
+                    <img class="absolute top-[20px] left-[20px] w-[40px]" src="/images/graph.png" alt="graph">
+                </div>
+                <div class="w-[289px] h-[98px] ml-6 basis-[64%]">
+                    <h3
+                        class="font-Montserrat font-bold text-[#3B3B3B] text-[24px] leading-[32px] sm:mb-[10px] mb-[10px]">
+                        Statistics</h3>
+                    <p class="font-DM+Sans font-normal text-[#5A7184] text-[16px] leading-[28px]">Assertively parallel
+                        task synergistic deliverables after
+                        high-quality.</p>
+                </div>
+            </div>
+
+            <!-- Easy Access 3 -->
+            <div
+                class="w-[355px] h-[206px] sm:w-[453px] sm:h-[178px] col-span-2 col-start-5 flex sm:items-center items-start bg-white shadow-[5px_30px_56px_0px_#3737371C] rounded-[20px] px-[30px] py-[40px] mb-[16px]">
+                <div class="relative w-[80px] h-[80px] bg-[#40D3E5] text-white rounded-full">
+                    <img class="absolute top-[20px] left-[20px] w-[40px]" src="/images/key.png" alt="key">
+                </div>
+                <div class="w-[289px] h-[98px] ml-6 basis-[64%]">
+                    <h3
+                        class="font-Montserrat font-bold text-[#3B3B3B] text-[24px] leading-[32px] sm:mb-[10px] mb-[10px]">
+                        Easy Access</h3>
+                    <p class="font-DM+Sans font-normal text-[#5A7184] text-[16px] leading-[28px]">Assertively parallel
+                        task synergistic deliverables after
+                        high-quality.</p>
+                </div>
+            </div>
+
+            <!-- Collaboration 4 -->
+            <div
+                class="w-[355px] h-[206px] sm:w-[453px] sm:h-[178px] col-span-2 col-start-2 row-start-2 flex sm:items-center items-start bg-white shadow-[5px_30px_56px_0px_#3737371C] rounded-[20px] px-[30px] py-[40px] mb-[16px]">
+                <div class="relative w-[80px] h-[80px] bg-[#FFD167] text-white rounded-full">
+                    <img class="absolute top-[20px] left-[20px] w-[40px]" src="/images/people.png" alt="people">
+                </div>
+                <div class="w-[289px] h-[98px] ml-6 basis-[64%]">
+                    <h3
+                        class="font-Montserrat font-bold text-[#3B3B3B] text-[24px] leading-[32px] sm:mb-[10px] mb-[10px]">
+                        Collaboration</h3>
+                    <p class="font-DM+Sans font-normal text-[#5A7184] text-[16px] leading-[28px]">Assertively parallel
+                        task synergistic deliverables after
+                        high-quality.</p>
+                </div>
+            </div>
+
+            <!-- Total Control 5 -->
+            <div
+                class="w-[355px] h-[206px] sm:w-[453px] sm:h-[178px] col-span-2 col-start-4 row-start-2 flex sm:items-center items-start bg-white shadow-[5px_30px_56px_0px_#3737371C] rounded-[20px] px-[30px] py-[40px] mb-[16px]">
+                <div class="relative w-[80px] h-[80px] bg-[#1ECAAB] text-white rounded-full">
+                    <img class="absolute top-[20px] left-[20px] w-[40px]" src="/images/remote-control.png"
+                        alt="remote-control">
+                </div>
+                <div class="w-[289px] h-[98px] ml-6 basis-[64%]">
+                    <h3
+                        class="font-Montserrat font-bold text-[#3B3B3B] text-[24px] leading-[32px] sm:mb-[10px] mb-[10px]">
+                        Total Control</h3>
+                    <p class="font-DM+Sans font-normal text-[#5A7184] text-[16px] leading-[28px]">Assertively parallel
+                        task synergistic deliverables after
+                        high-quality.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        
     <!-- Everythings Dev 3-->
+    
+    
+    
+    <!-- section-box -->
+    <section  class="flex flex-col justify-center sm:flex-row max-[375px]:w-[375px] max-[375px]:h-[953px] overflow-x-hidden ">
+        <!-- content-box -->
+            <div class="w-[1564px] h-[865.98px] flex flex-col items-center justify-center sm:flex-row sm:justify-center max-[375px]:w-[377px] max-[375px]:h-[953px] ">
+                <!-- graphic-box-1642 -->
+                <div class="w-[785.02px] h-[807.09px] max-[375px]:w-[351px] max-[375px]:h-[360px] max-[375px]:items-center max-[375px]:justify-center relative">
+                    <img src="./images/Group 1642.svg" alt="graphic-card">
+                    <img src="C:\Users\passa\Desktop\Hack-hours\miniproject\images\Rectangle 738.svg" alt="">
+
+                    <img src="images/Rectangle 738.svg" alt="Rectangle 738" class="absolute top-[0] left-[20px] z-[-1] max-[375px]:w-[50%] max-[375px]:z-[-1]  max-[375px]:top-[-10px] max-[375px]:left-[15px] ">
+                    <img src="images/Rectangle 739.svg" alt="rectangle 739"class="absolute bottom-[70px] right-[100px] z-[-1] max-[375px]:w-[50%] max-[375px]:z-[-1] max-[375px]:abosolute 
+                    max-[375px]:top-[150px] max-[375px]:right-[50px]">
+                    
+                        
+                </div>
+                <!-- graphic-box-1642 -->
+            
+            <!-- text-box -->
+            <div class="w-[574px] h-[598px] flex flex-col gap-[40px] max-[375px]:w-[327px] max-[375px]:h-[514px] max-[375px]:flex-col">
+                <div class="w-[574px] h-[116px] font-circular font-black text-[48px] leading-[58px] tracking-[0%] max-[375px]:w-[240px] max-[375px]:h-[80px] max-[375px]:flex  max-[375px]:p-5 max-[375px]:font-extrabold max-[375px]:text-xl  max-[375px]:leading-8  max-[375px]:tracking-normal text-[#1F2937] relative">
+                    Everything you need in one place
+                    <div class="bg-[#FFE3D8] bg-opacity-50 z-[-1] w-[100px] h-[50px] absolute top-[69px] left-[100px] border-[1px] border-[#E47C58] max-[375px]:w-[45px] max-[375px]:h-[25px] max-[375px]:top-[58px] max-[375px]:left-[135px] "></div>
+                </div>
+                    
+                <div class="w-[574px] h-[328px] flex flex-col justify-between max-[375px]:w-[327px] max-[375px]:h-[514px] max-[375px]:flex max-[375px]:pl-5">
+                    
+                    <div class="w-[574px] h-[70px] bg-[#FEF3EF] flex  items-center justify-between 
+                    max-[375px]:w-[300px] max-[375px]:h-[70px] max-[375px]:mr-[20px]">
+                        <p class="relative pl-4 before:absolute before:top-1/2 before:left-0 before:w-2 before:h-2 before:bg-red-500 before:rounded-full before:-translate-y-1/2 ml-[20px] font-sans font-medium text-[20px] leading-[32px] tracking-[0px] text-[#1F2937] ">Real-time data</p>
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-[20px]">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.0893 11.5312C2.7565 11.4854 2.5 11.1958 2.5 10.8456C2.5 10.4634 2.80526 10.1536 3.18182 10.1536L15.1666 10.1536L10.8372 5.77767L10.7711 5.70021C10.5725 5.42974 10.5937 5.0453 10.8352 4.79914C11.101 4.52836 11.5327 4.52745 11.7995 4.79711L17.2898 10.3458C17.3225 10.3776 17.3521 10.4127 17.378 10.4505C17.5639 10.7207 17.5377 11.0955 17.2994 11.3362L11.7994 16.8938L11.7228 16.9607C11.4555 17.1611 11.0767 17.1379 10.8352 16.8917C10.5695 16.6209 10.5704 16.1828 10.8373 15.9132L15.1677 11.5375L3.18182 11.5375L3.0893 11.5312Z" fill="#3B3B3B"/>
+                            </svg>
+                    </div>
+                    <div class="w-[574px] h-[70px] bg-[#FEF3EF] flex  items-center justify-between max-[375px]:w-[300px] max-[375px]:h-[70px]">
+                        <p class="relative pl-4 before:absolute before:top-1/2 before:left-0 before:w-2 before:h-2 before:bg-red-500 before:rounded-full before:-translate-y-1/2 ml-[20px] font-sans font-medium text-[20px] leading-[32px] tracking-[0px] text-[#1F2937] ">End-to-end encyption</p>
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-[20px]">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.0893 11.5312C2.7565 11.4854 2.5 11.1958 2.5 10.8456C2.5 10.4634 2.80526 10.1536 3.18182 10.1536L15.1666 10.1536L10.8372 5.77767L10.7711 5.70021C10.5725 5.42974 10.5937 5.0453 10.8352 4.79914C11.101 4.52836 11.5327 4.52745 11.7995 4.79711L17.2898 10.3458C17.3225 10.3776 17.3521 10.4127 17.378 10.4505C17.5639 10.7207 17.5377 11.0955 17.2994 11.3362L11.7994 16.8938L11.7228 16.9607C11.4555 17.1611 11.0767 17.1379 10.8352 16.8917C10.5695 16.6209 10.5704 16.1828 10.8373 15.9132L15.1677 11.5375L3.18182 11.5375L3.0893 11.5312Z" fill="#3B3B3B"/>
+                            </svg>
+                    </div>
+                    <div class="w-[574px] h-[70px] bg-[#FEF3EF] flex  items-center justify-between max-[375px]:w-[300px] max-[375px]:h-[70px]">
+                        <p class="relative pl-4 before:absolute before:top-1/2 before:left-0 before:w-2 before:h-2 before:bg-red-500 before:rounded-full before:-translate-y-1/2 ml-[20px]  font-sans font-medium text-[20px] leading-[32px] tracking-[0px] text-[#1F2937] ">FDIC Insured</p>
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-[20px]">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.0893 11.5312C2.7565 11.4854 2.5 11.1958 2.5 10.8456C2.5 10.4634 2.80526 10.1536 3.18182 10.1536L15.1666 10.1536L10.8372 5.77767L10.7711 5.70021C10.5725 5.42974 10.5937 5.0453 10.8352 4.79914C11.101 4.52836 11.5327 4.52745 11.7995 4.79711L17.2898 10.3458C17.3225 10.3776 17.3521 10.4127 17.378 10.4505C17.5639 10.7207 17.5377 11.0955 17.2994 11.3362L11.7994 16.8938L11.7228 16.9607C11.4555 17.1611 11.0767 17.1379 10.8352 16.8917C10.5695 16.6209 10.5704 16.1828 10.8373 15.9132L15.1677 11.5375L3.18182 11.5375L3.0893 11.5312Z" fill="#3B3B3B"/>
+                            </svg>
+                    </div>
+                    <div class="w-[574px] h-[70px] bg-[#FEF3EF] flex items-center justify-between max-[375px]:w-[300px] max-[375px]:h-[70px]">
+                        <p class="relative pl-4 before:absolute before:top-1/2 before:left-0 before:w-2 before:h-2 before:bg-red-500 before:rounded-full before:-translate-y-1/2 ml-[20px]  font-sans font-medium text-[20px] leading-[32px] tracking-[0px] flex text-[#1F2937] ">
+                            REST API enabled 
+                          </p>
+                          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-[20px]">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.0893 11.5312C2.7565 11.4854 2.5 11.1958 2.5 10.8456C2.5 10.4634 2.80526 10.1536 3.18182 10.1536L15.1666 10.1536L10.8372 5.77767L10.7711 5.70021C10.5725 5.42974 10.5937 5.0453 10.8352 4.79914C11.101 4.52836 11.5327 4.52745 11.7995 4.79711L17.2898 10.3458C17.3225 10.3776 17.3521 10.4127 17.378 10.4505C17.5639 10.7207 17.5377 11.0955 17.2994 11.3362L11.7994 16.8938L11.7228 16.9607C11.4555 17.1611 11.0767 17.1379 10.8352 16.8917C10.5695 16.6209 10.5704 16.1828 10.8373 15.9132L15.1677 11.5375L3.18182 11.5375L3.0893 11.5312Z" fill="#3B3B3B"/>
+                            </svg>
+                    </div>
+                </div>
+            
+                <button  onclick="window.location.href='https://www.techupth.com/';" input type="button" class=" w-[164px] h-[64px] rounded-[4px] bg-[#FF7342] text-white font-[DM Sans] font-bold text-[16px] leading-[20.83px] max-[375px]:w-[130px] max-[375px]:h-[64px] max-[375px]:rounded-[4px] max-[375px]:ml-5 max-[375px]:font-sans max-[375px]:font-bold max-[375px]:text-sm max-[375px]:leading-[20.83px] max-[375px]:tracking-normal ">
+                    Try it Out Free
+                </button>
+            </div>
+            <!-- text-box -->
+            </div>
+        <!-- content-box -->
+    </section>
+    <!-- section-box -->
 
     <!-- Intrigate & pricing Dev 4-->
+    <section id="pricing" class="bg-[#f9f9f9] font-circularStd mb-[80px] mt-[35px]">
+        <!-- Decorative elements -->
+        <img src="/mini-project-service-monitor/images/half-circle.png" alt="" class="relative sm:absolute top-[170px] left-[25px] w-[45px] h-[45px] md:w-[75px] md:h-[105px] lg:w-[100px] lg:h-[100px] xl:top-[2960px] xl:left-[80px]">
+        <img src="/mini-project-service-monitor/images/Rectangle-740.png" alt="" class="relative absolute bottom-[-1750px] right-[-300px] w-[55px] h-[55px] md:w-[120px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:bottom-[-800px] xl:right-[-1350px] z-1">
+
+        <div class="container mx-auto px-8 sm:px-12 py-8 lg:py-16 max-w-[1400px]">
+            <!-- Header section -->
+            <header class="text-center mb-12 lg:mb-20">
+                <h1 class="text-[24px] lg:text-5xl font-black text-[#3B3B3B] leading-tight lg:leading-[58px] relative">
+                    Easy to
+                    <span class="relative inline-block">
+                        <span
+                            class="absolute left-[-5px] right-[-9px] top-0 bottom-0 bg-[#ffe8e0] z-[-1] rounded-sm border border-[#ff7342] mr-[9px]"></span>
+                        Intriga
+                    </span>te<br>
+                    Your Apps
+                </h1>
+            </header>
+
+            <!-- App grid section -->
+            <div class="bg-[#f9f9f9] font-circularStd mb-[100px]">
+                <!-- Mobile: Single column, Desktop: 5 columns -->
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-3 mb-3 max-w-[275px] mx-auto lg:max-w-none">
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/slack.png" alt="Slack" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/netflix.png" alt="Netflix" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+                    <div
+                        class="bg-[#ff7342] p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/google.png" alt="Google" class="max-w-[80%] h-auto">
+                    </div>
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/fitbit.png" alt="Fitbit" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/airbnb.png" alt="Airbnb" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-3 max-w-[275px] mx-auto lg:max-w-none">
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/airbnb.png" alt="Airbnb" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/slack.png" alt="Slack" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/netflix.png" alt="Netflix" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+
+
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/slack.png" alt="Slack" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/goo-dark.png" alt="Google" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing section -->
+            <section class="mt-16 lg:mt-20">
+                <div class="text-center mb-12 lg:mb-16">
+                    <h2
+                        class="text-[24px] lg:text-5xl font-black text-[#3B3B3B] leading-tight lg:leading-[58px] relative">
+                        Affordable
+                        <span class="relative inline-block">
+                            <span
+                                class="absolute left-[-5px] right-[-9px] top-0 bottom-0 bg-[#ffe8e0] z-[-1] rounded-sm border border-[#ff7342] mr-[9px]"></span>
+                            Pricin
+                        </span>g
+                    </h2>
+
+                    <div class="flex items-center justify-center gap-4 mt-8 lg:mt-12">
+                        <span class="text-[#333333] font-medium ">Monthly</span>
+                        <div class="w-16 h-8 bg-[#ff7342] rounded-full relative cursor-pointer">
+                            <div class="absolute top-1 right-1 w-6 h-6 bg-white rounded-full"></div>
+                        </div>
+                        <span class="text-[#333333] font-medium">Annually</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-8 justify-center items-stretch">
+                    <!-- Plans -->
+                    <div
+                        class="w-full lg:w-96 p-6 lg:p-8 hover:bg-white hover:rounded-2xl hover:shadow-lg transition-all">
+                        <div class="mb-6">
+                            <h3 class="text-[24px] font-bold mb-4">Free Plan</h3>
+                            <div class="text-[48px] font-black mb-4">$0<span
+                                    class="text-[16px] text-[#5A7184] font-medium ml-2">/month</span>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Access to editing all blocks</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Editing blocks together</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Access to all premium icons</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">A dedicated domain</p>
+                                </li>
+                            </ul>
+                            <button
+                                class="w-full py-3 bg-[#FFD167] hover:bg-[#eeaa0c] rounded-md transition-transform hover:-translate-y-1 text-[#fff] text-[16px] font-bold">
+                                Try for Free
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Premium Plan -->
+                    <div class="w-full lg:w-96 bg-white rounded-2xl shadow-xl p-6 lg:p-8 transform lg:scale-105">
+                        <div class="mb-6">
+                            <h3 class="text-[24px] font-bold mb-4">Premium Plan</h3>
+                            <div class="text-[48px] font-black mb-4">$199<span
+                                    class="text-[16px] text-[#5A7184] font-medium ml-2">/year</span>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Access to editing all blocks</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Editing blocks together</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Access to all premium icons</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">A dedicated domain</p>
+                                </li>
+                            </ul>
+                            <button
+                                class="w-full py-3 bg-[#FF7342] hover:bg-[#df5928] rounded-md transition-transform hover:-translate-y-1 text-[#fff] text-[16px] font-bold">
+                                Try for Free
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Business Plan -->
+                    <div
+                        class="w-full lg:w-96 p-6 lg:p-8 hover:bg-white hover:rounded-2xl hover:shadow-lg transition-all">
+                        <div class="mb-6">
+                            <h3 class="text-[24px] font-bold mb-4">Business Plan</h3>
+                            <div class="text-[48px] font-black mb-4">$299<span
+                                    class="text-[16px] text-[#5A7184] font-medium ml-2">/year</span>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Access to editing all blocks</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Editing blocks together</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Access to all premium icons</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">A dedicated domain</p>
+                                </li>
+                            </ul>
+                            <button
+                                class="w-full py-3 bg-[#FFD167] hover:bg-[#eeaa0c] rounded-md transition-transform hover:-translate-y-1 text-[#fff] text-[16px] font-bold">
+                                Try for Free
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
     <!-- Testimonial Section Dev-5-->
     <section
       id="testimonial"
