@@ -78,9 +78,12 @@
 
     <script>
         document.getElementById("menu-btn").addEventListener("click", function() {
-            document.getElementById("mobile-menu").classList.toggle("hidden");
+            let menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("opacity-0");
+            menu.classList.toggle("pointer-events-none");
         });
     </script>
+    
     
     <!-- Featured Dev 2-->
 
