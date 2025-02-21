@@ -7,15 +7,8 @@ module.exports = {
         'xs': '375px', // เพิ่ม Breakpoint ใหม่ที่ 375px
       },
       colors: {
-        primary: "#FF7342", // สีส้ม
-        secondary: "#FFD167", // สีเหลือง
-        third: "#FFFFFF", // สีพื้นหลัง 1
-        forth: "#F9F9F9", // สีพื้นหลัง 2
-        fifth: "#3B3B3B", // สีดำเข้ม
-      },
-      fontFamily: {
-        sans: ["DM Sans", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"],
+        primary: "#4f46e5", // สีหลัก
+        secondary: "#64748b", // สีรอง
       },
       borderRadius: {
         base: "8px",
@@ -27,3 +20,4 @@ module.exports = {
   },
   plugins: [],
 };
+  
