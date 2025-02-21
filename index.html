@@ -15,24 +15,25 @@
     <!-- Dev 1-->
     <header class="container mx-auto p-4 h-[1048px] md:h-[1048px] sm:h-[690px] relative pt-28 pb-20 sm:pt-32">
         <!-- Nav Bar -->
-        <nav class="absolute flex justify-between items-center py-4 top-0 left-0 w-full">
+        <nav class="absolute flex justify-between items-center py-10 top-0 left-0 w-full">
             <!-- Logo -->
-            <div class="flex-shrink-0 mr-20 w-[182.91] h-[54.65px] ml-10">
+            <div class="flex-shrink-0 mr-20 w-[182.91] h-[54.65px] ml-10"><a href="index.html">
                 <img src="images/img-logo.svg" alt="Logo" class="h-10">
+                </a>    
             </div>
             
             <!-- Menu -->
             <div class="hidden md:flex space-x-20 sm:space-x-3 md:space-x-5 lg:space-x-10 xl:space-x-15 2xl:space-x-20 text-black flex-grow ml-[50px] font-dm-sans font-medium leading-[23.44px]">
-                <a href="#" class="hover:text-primary active:text-primary underline">Home</a>
-                <a href="#" class="hover:text-primary">Feature</a>
-                <a href="#" class="hover:text-primary">Pricing</a>
-                <a href="#" class="hover:text-primary">Testimonial</a>
+                <a href="index.html" class="hover:text-[#FF7342] !text-[#FF7342] underline">Home</a>
+                <a href="#Featured" class="hover:text-[#FF7342]">Feature</a>
+                <a href="#pricing" class="hover:text-[#FF7342]">Pricing</a>
+                <a href="#testimonial" class="hover:text-[#FF7342]">Testimonial</a>
             </div>
             
             <!-- Buttons -->
             <div class="hidden md:flex flex-wrap justify-end space-x-4 md:space-x-2 sm:space-x-1 mr-10">
-                <button class="bg-secondary text-fifth w-[139px] h-[64px] lg:w-[130px] lg:h-[60px] md:w-[120px] md:h-[56px] sm:w-[110px] sm:h-[52px] xs:w-[100px] xs:h-[48px] flex-shrink rounded-md hover:bg-primary hover:text-white">Register</button>
-                <button class="bg-primary text-white w-[139px] h-[64px] lg:w-[130px] lg:h-[60px] md:w-[120px] md:h-[56px] sm:w-[110px] sm:h-[52px] xs:w-[100px] xs:h-[48px] flex-shrink rounded-md hover:bg-secondary hover:text-black">Sign In</button>
+                <button  onclick="window.location.href='https://www.techupth.com/';" class="bg-[#FFD167] text-[#3B3B3B] w-[139px] h-[64px] lg:w-[130px] lg:h-[60px] md:w-[120px] md:h-[56px] sm:w-[110px] sm:h-[52px] xs:w-[100px] xs:h-[48px] flex-shrink rounded-md hover:bg-[#FF7342] hover:text-white">Register</button>
+                <button onclick="window.location.href='https://www.techupth.com/';" class="bg-[#FF7342] text-white w-[139px] h-[64px] lg:w-[130px] lg:h-[60px] md:w-[120px] md:h-[56px] sm:w-[110px] sm:h-[52px] xs:w-[100px] xs:h-[48px] flex-shrink rounded-md hover:bg-[#FFD167] hover:text-black">Sign In</button>
             </div>
 
             <!-- Mobile Menu -->
@@ -40,25 +41,25 @@
                 <button id="menu-btn" class="text-2xl mr-10">
                     <box-icon name='grid-small' size='lg'></box-icon>
                 </button>
-                <div id="mobile-menu" class="absolute top-16 right-4 bg-white text-fifth shadow-lg rounded-md w-48 flex flex-col opacity-0 pointer-events-none transition-all duration-300">
-                    <a href="#" class="p-4 hover:bg-secondary">Home</a>
-                    <a href="#" class="p-4 hover:bg-secondary">Feature</a>
-                    <a href="#" class="p-4 hover:bg-secondary">Pricing</a>
-                    <a href="#" class="p-4 hover:bg-secondary">Testimonial</a>
+                <div id="mobile-menu" class="absolute top-16 right-4 bg-white text-[#3B3B3B] shadow-lg rounded-md w-48 flex flex-col opacity-0 pointer-events-none transition-all duration-300">
+                    <a href="index.html" class="p-4 hover:bg-[#FFD167]">Home</a>
+                    <a href="#Featured" class="p-4 hover:bg-[#FFD167]">Feature</a>
+                    <a href="#pricing" class="p-4 hover:bg-[#FFD167]">Pricing</a>
+                    <a href="#testimonial" class="p-4 hover:bg-[#FFD167]dary">Testimonial</a>
                     <div class="p-4 flex flex-col space-y-2">
-                        <button class="bg-secondary text-fifth px-4 py-2 rounded-md hover:bg-primary hover:text-white">Register</button>
-                        <button class="bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary hover:text-fifth">Sign In</button>
+                        <button onclick="window.location.href='https://www.techupth.com/';" class="bg-[#FFD167] text-[#3B3B3B] px-4 py-2 rounded-md hover:bg-[#FF7342] hover:text-white">Register</button>
+                        <button onclick="window.location.href='https://www.techupth.com/';" class="bg-[#FF7342] text-white px-4 py-2 rounded-md hover:bg-[#FFD167] hover:text-[#3B3B3B]">Sign In</button>
                     </div>
                 </div>
             </div>
         </nav>
 
         <!-- Hero Section -->
-        <div class=" h-[666.83px] flex flex-col-reverse md:flex-row items-center justify-around mt-[20px] text-center md:text-left">
+        <div class=" h-[666.83px] flex flex-col-reverse md:flex-row items-center justify-around mt-[20px] text-left sm:text-center  md:text-left">
             <!-- Left Side -->
             <div class="flex flex-col space-y-6 md:w-2/5 text-start md:text-left md:pl-10">
-                <h1 class="text-3xl md:text-6xl sm:text-7xl font-bold font-montserrat text-fifth max-w-[605px] md:h-auto sm:h-auto flex-shrink">Best Platform<br>for Monitor<br>Work Flow</h1>
-                <button class="bg-primary text-white h-[64px] w-[206px] px-6 py-3 font-dm-sans rounded-md hover:bg-secondary hover:text-fifth">
+                <h1 class="text-3xl md:text-6xl sm:text-7xl font-bold font-montserrat text-[#3B3B3B] max-w-[605px] md:h-auto sm:h-auto flex-shrink">Best Platform<br>for Monitor<br>Work Flow</h1>
+                <button onclick="window.location.href='https://www.techupth.com/';" class="bg-[#FF7342] text-white h-[64px] w-[206px] px-6 py-3 font-dm-sans rounded-md hover:bg-[#FFD167] hover:text-[#3B3B3B]">
                     Get 15 Day Trial
                 </button>                
                 <div class="grid grid-cols-2 gap-10 sm:grid-cols-4 sm:gap-3">
