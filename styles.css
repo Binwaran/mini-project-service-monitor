@@ -20,3 +20,6 @@ background-color: var(--primary-color);
 tailwind 
 bg-primar สามารถใส่ได้เลย
 --*/
+* {
+  font-family: 'Montserrat', sans-serif;
+}

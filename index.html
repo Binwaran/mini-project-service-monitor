@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service Monitor</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,34 +19,28 @@
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
-
-<body>
-    <header>
-        <!-- Dev 1-->
 <body class="  m-0 p-0 box-border bg-gradient-to-b from-orange-100 to-white w-full ">
     <!-- Dev 1-->
-    <header class="container mx-auto p-4 h-[1048px] md:h-[1048px] sm:h-[690px] relative pt-28 pb-20 sm:pt-32">
+    <header class="container mx-auto p-4 h-[1048px] md:h-[1048px] sm:h-[790px] relative pt-40 sm:pt-32">
         <!-- Nav Bar -->
-        <nav class="absolute flex justify-between items-center py-10 top-0 left-0 w-full">
+        <nav class=" flex justify-between items-center py-4 fixed top-0 left-0 mt-5 w-full">
             <!-- Logo -->
-            <div class="flex-shrink-0 mr-20 w-[182.91] h-[54.65px] ml-10"><a href="index.html">
+            <div class="flex-shrink-0 mr-20 w-[182.91] h-[54.65px] ml-10">
                 <img src="images/img-logo.svg" alt="Logo" class="h-10">
-                </a>    
             </div>
             
             <!-- Menu -->
-            <div class="hidden md:flex space-x-20 sm:space-x-3 md:space-x-5 lg:space-x-10 xl:space-x-15 2xl:space-x-20 text-black flex-grow ml-[50px] font-dm-sans font-medium leading-[23.44px]">
-                <a href="index.html" class="hover:text-[#FF7342] !text-[#FF7342] underline">Home</a>
-                <a href="#Featured" class="hover:text-[#FF7342]">Feature</a>
-                <a href="#pricing" class="hover:text-[#FF7342]">Pricing</a>
-                <a href="#testimonial" class="hover:text-[#FF7342]">Testimonial</a>
+            <div class="hidden md:flex space-x-20 sm:space-x-3 md:space-x-5 lg:space-x-10 xl:space-x-15 2xl:space-x-20 text-black flex-grow ml-[50px]">
+                <a href="#" class="hover:text-orange-500 font-dm-sans font-medium leading-[23.44px] active:text-orange-500 underline">Home</a>
+                <a href="#" class="hover:text-orange-500 font-dm-sans font-medium leading-[23.44px]">Feature</a>
+                <a href="#" class="hover:text-orange-500 font-dm-sans font-medium leading-[23.44px]">Pricing</a>
+                <a href="#" class="hover:text-orange-500 font-dm-sans font-medium leading-[23.44px]">Testimonial</a>
             </div>
             
             <!-- Buttons -->
             <div class="hidden md:flex flex-wrap justify-end space-x-4 md:space-x-2 sm:space-x-1 mr-10">
-                <button  onclick="window.location.href='https://www.techupth.com/';" class="bg-[#FFD167] text-[#3B3B3B] w-[139px] h-[64px] lg:w-[130px] lg:h-[60px] md:w-[120px] md:h-[56px] sm:w-[110px] sm:h-[52px] xs:w-[100px] xs:h-[48px] flex-shrink rounded-md hover:bg-[#FF7342] hover:text-white">Register</button>
-                <button onclick="window.location.href='https://www.techupth.com/';" class="bg-[#FF7342] text-white w-[139px] h-[64px] lg:w-[130px] lg:h-[60px] md:w-[120px] md:h-[56px] sm:w-[110px] sm:h-[52px] xs:w-[100px] xs:h-[48px] flex-shrink rounded-md hover:bg-[#FFD167] hover:text-black">Sign In</button>
+                <button class="bg-yellow-400 text-black w-[139px] h-[64px] lg:w-[130px] lg:h-[60px] md:w-[120px] md:h-[56px] sm:w-[110px] sm:h-[52px] xs:w-[100px] xs:h-[48px] flex-shrink rounded-md hover:bg-orange-500 hover:text-white">Register</button>
+                <button class="bg-orange-500 text-white w-[139px] h-[64px] lg:w-[130px] lg:h-[60px] md:w-[120px] md:h-[56px] sm:w-[110px] sm:h-[52px] xs:w-[100px] xs:h-[48px] flex-shrink rounded-md hover:bg-yellow-400 hover:text-black">Sign In</button>
             </div>
 
             <!-- Mobile Menu -->
@@ -57,33 +48,28 @@
                 <button id="menu-btn" class="text-2xl mr-10">
                     <box-icon name='grid-small' size='lg'></box-icon>
                 </button>
-                <div id="mobile-menu" class="absolute top-16 right-4 bg-white text-[#3B3B3B] shadow-lg rounded-md w-48 flex flex-col opacity-0 pointer-events-none transition-all duration-300">
-                    <a href="index.html" class="p-4 hover:bg-[#FFD167]">Home</a>
-                    <a href="#Featured" class="p-4 hover:bg-[#FFD167]">Feature</a>
-                    <a href="#pricing" class="p-4 hover:bg-[#FFD167]">Pricing</a>
-                    <a href="#testimonial" class="p-4 hover:bg-[#FFD167]dary">Testimonial</a>
+                <div id="mobile-menu" class="hidden absolute top-16 right-4 bg-white shadow-lg rounded-md w-48 flex flex-col">
+                    <a href="#" class="p-4 hover:bg-yellow-100">Home</a>
+                    <a href="#" class="p-4 hover:bg-yellow-100">Feature</a>
+                    <a href="#" class="p-4 hover:bg-yellow-100">Pricing</a>
+                    <a href="#" class="p-4 hover:bg-yellow-100">Testimonial</a>
                     <div class="p-4 flex flex-col space-y-2">
-                        <button onclick="window.location.href='https://www.techupth.com/';" class="bg-[#FFD167] text-[#3B3B3B] px-4 py-2 rounded-md hover:bg-[#FF7342] hover:text-white">Register</button>
-                        <button onclick="window.location.href='https://www.techupth.com/';" class="bg-[#FF7342] text-white px-4 py-2 rounded-md hover:bg-[#FFD167] hover:text-[#3B3B3B]">Sign In</button>
+                        <button class="bg-yellow-400 text-black px-4 py-2 rounded-md hover:bg-orange-500 hover:text-white">Register</button>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-yellow-400 hover:text-black">Sign In</button>
                     </div>
                 </div>
             </div>
         </nav>
 
         <!-- Hero Section -->
-        <div class=" h-[666.83px] flex flex-col-reverse md:flex-row items-center justify-around mt-[20px] text-left sm:text-center  md:text-left">
+        <div class=" h-[666.83px] flex flex-col-reverse md:flex-row items-center justify-around mt-[20px] text-center md:text-left">
             <!-- Left Side -->
             <div class="flex flex-col space-y-6 md:w-2/5 text-start md:text-left md:pl-10">
-                <h1 class="text-3xl md:text-6xl sm:text-7xl font-bold font-montserrat text-[#3B3B3B] max-w-[605px] md:h-auto sm:h-auto flex-shrink">Best Platform<br>for Monitor<br>Work Flow</h1>
-                <button onclick="window.location.href='https://www.techupth.com/';" class="bg-[#FF7342] text-white h-[64px] w-[206px] px-6 py-3 font-dm-sans rounded-md hover:bg-[#FFD167] hover:text-[#3B3B3B]">
-                    Get 15 Day Trial
-                </button>                
-                <div class="grid grid-cols-2 gap-10 sm:grid-cols-4 sm:gap-3">
-                    <div><img src="images/img-logo-AB.svg" alt="Partner Logos" class="h-[33.54px] mt-10"></div>
-                    <div><img src="images/img-logo-DS.svg" alt="Partner Logos" class="h-[33.54px] mt-10"></div>
-                    <div><img src="images/img-logo-HR.svg" alt="Partner Logos" class="h-[33.54px] mt-10"></div>
-                    <div><img src="images/img-logo-barbecue.svg" alt="Partner Logos" class="h-[33.54px] mt-10"></div>
-                </div>                                
+                <h1 class="text-3xl md:text-6xl sm:text-7xl font-bold text-gray-800 max-w-[605px] md:h-auto sm:h-auto flex-shrink">Best Platform<br>for Monitor<br>Work Flow</h1>
+                <button class="bg-orange-500 text-white px-[10px] py-3 rounded-md hover:bg-yellow-400 hover:text-black w-auto min-w-0 inline-block">Get 15 Day Trial</button>
+                <div>
+                    <img src="images/img-partner-logos.svg" alt="Partner Logos" class="h-10 mt-10">
+                </div>
             </div>
             
             <!-- Right Side -->
@@ -93,6 +79,12 @@
         </div>
     </header>
 
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+    
     <!-- Featured Dev 2-->
 
     <div id="Featured" class="flex flex-col mx-[10px] mt-[70px] mb-[57px] sm:mx-[250px] sm:mt-[96px] sm:mb-[86px]">
@@ -268,21 +260,208 @@
     </section>
     <!-- section-box -->
 
-        
-
-
-
-
-
-
-
-
-    
     <!-- Intrigate & pricing Dev 4-->
+    <section id="pricing" class="bg-[#f9f9f9] font-circularStd mb-[80px] mt-[35px]">
+        <!-- Decorative elements -->
+        <img src="/mini-project-service-monitor/images/half-circle.png" alt="" class="relative sm:absolute top-[170px] left-[25px] w-[45px] h-[45px] md:w-[75px] md:h-[105px] lg:w-[100px] lg:h-[100px] xl:top-[2960px] xl:left-[80px]">
+        <img src="/mini-project-service-monitor/images/Rectangle-740.png" alt="" class="relative absolute bottom-[-1750px] right-[-300px] w-[55px] h-[55px] md:w-[120px] md:h-[120px] lg:w-[100px] lg:h-[100px] xl:bottom-[-800px] xl:right-[-1350px] z-1">
 
+        <div class="container mx-auto px-8 sm:px-12 py-8 lg:py-16 max-w-[1400px]">
+            <!-- Header section -->
+            <header class="text-center mb-12 lg:mb-20">
+                <h1 class="text-[24px] lg:text-5xl font-black text-[#3B3B3B] leading-tight lg:leading-[58px] relative">
+                    Easy to
+                    <span class="relative inline-block">
+                        <span
+                            class="absolute left-[-5px] right-[-9px] top-0 bottom-0 bg-[#ffe8e0] z-[-1] rounded-sm border border-[#ff7342] mr-[9px]"></span>
+                        Intriga
+                    </span>te<br>
+                    Your Apps
+                </h1>
+            </header>
+
+            <!-- App grid section -->
+            <div class="bg-[#f9f9f9] font-circularStd mb-[100px]">
+                <!-- Mobile: Single column, Desktop: 5 columns -->
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-3 mb-3 max-w-[275px] mx-auto lg:max-w-none">
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/slack.png" alt="Slack" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/netflix.png" alt="Netflix" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+                    <div
+                        class="bg-[#ff7342] p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/google.png" alt="Google" class="max-w-[80%] h-auto">
+                    </div>
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/fitbit.png" alt="Fitbit" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/airbnb.png" alt="Airbnb" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-3 max-w-[275px] mx-auto lg:max-w-none">
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/airbnb.png" alt="Airbnb" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/slack.png" alt="Slack" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/netflix.png" alt="Netflix" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+
+
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/slack.png" alt="Slack" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+                    <div
+                        class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-center w-[275px] h-[120px] lg:w-full">
+                        <img src="/mini-project-service-monitor/images/goo-dark.png" alt="Google" class="max-w-[80%] h-auto opacity-70">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing section -->
+            <section class="mt-16 lg:mt-20">
+                <div class="text-center mb-12 lg:mb-16">
+                    <h2
+                        class="text-[24px] lg:text-5xl font-black text-[#3B3B3B] leading-tight lg:leading-[58px] relative">
+                        Affordable
+                        <span class="relative inline-block">
+                            <span
+                                class="absolute left-[-5px] right-[-9px] top-0 bottom-0 bg-[#ffe8e0] z-[-1] rounded-sm border border-[#ff7342] mr-[9px]"></span>
+                            Pricin
+                        </span>g
+                    </h2>
+
+                    <div class="flex items-center justify-center gap-4 mt-8 lg:mt-12">
+                        <span class="text-[#333333] font-medium ">Monthly</span>
+                        <div class="w-16 h-8 bg-[#ff7342] rounded-full relative cursor-pointer">
+                            <div class="absolute top-1 right-1 w-6 h-6 bg-white rounded-full"></div>
+                        </div>
+                        <span class="text-[#333333] font-medium">Annually</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-8 justify-center items-stretch">
+                    <!-- Plans -->
+                    <div
+                        class="w-full lg:w-96 p-6 lg:p-8 hover:bg-white hover:rounded-2xl hover:shadow-lg transition-all">
+                        <div class="mb-6">
+                            <h3 class="text-[24px] font-bold mb-4">Free Plan</h3>
+                            <div class="text-[48px] font-black mb-4">$0<span
+                                    class="text-[16px] text-[#5A7184] font-medium ml-2">/month</span>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Access to editing all blocks</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Editing blocks together</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Access to all premium icons</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">A dedicated domain</p>
+                                </li>
+                            </ul>
+                            <button
+                                class="w-full py-3 bg-[#FFD167] hover:bg-[#eeaa0c] rounded-md transition-transform hover:-translate-y-1 text-[#fff] text-[16px] font-bold">
+                                Try for Free
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Premium Plan -->
+                    <div class="w-full lg:w-96 bg-white rounded-2xl shadow-xl p-6 lg:p-8 transform lg:scale-105">
+                        <div class="mb-6">
+                            <h3 class="text-[24px] font-bold mb-4">Premium Plan</h3>
+                            <div class="text-[48px] font-black mb-4">$199<span
+                                    class="text-[16px] text-[#5A7184] font-medium ml-2">/year</span>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Access to editing all blocks</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Editing blocks together</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Access to all premium icons</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">A dedicated domain</p>
+                                </li>
+                            </ul>
+                            <button
+                                class="w-full py-3 bg-[#FF7342] hover:bg-[#df5928] rounded-md transition-transform hover:-translate-y-1 text-[#fff] text-[16px] font-bold">
+                                Try for Free
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Business Plan -->
+                    <div
+                        class="w-full lg:w-96 p-6 lg:p-8 hover:bg-white hover:rounded-2xl hover:shadow-lg transition-all">
+                        <div class="mb-6">
+                            <h3 class="text-[24px] font-bold mb-4">Business Plan</h3>
+                            <div class="text-[48px] font-black mb-4">$299<span
+                                    class="text-[16px] text-[#5A7184] font-medium ml-2">/year</span>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Access to editing all blocks</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Editing blocks together</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">Access to all premium icons</p>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <img src="/mini-project-service-monitor/images/Checkmark-15.png" alt="check" class="w-[28.3px] h-[28.3px] ">
+                                    <p class="text-[#5A7184] font-normal text-[16px]">A dedicated domain</p>
+                                </li>
+                            </ul>
+                            <button
+                                class="w-full py-3 bg-[#FFD167] hover:bg-[#eeaa0c] rounded-md transition-transform hover:-translate-y-1 text-[#fff] text-[16px] font-bold">
+                                Try for Free
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
     <footer>
         <!-- Dev 5-->
     </footer>
+
 
 </body>
 
